@@ -10,7 +10,7 @@ var lvl = 1;
 //Functions
 
 function oncl() {
-    score += increment;
+    clicks += increment;
     textRefresh();
 }
 

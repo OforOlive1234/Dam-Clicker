@@ -13,7 +13,7 @@ var lvl_upgrade_value = lvl*50
 function oncl() {
     clicks += increment;
     if (clicks == lvl_upgrade_value) {
-        lvl++
+        lvl += 1;
     }
 
     textRefresh();

@@ -12,7 +12,7 @@ var lvl_upgrade_value = lvl*50;
 
 function oncl() {
     clicks += increment;
-    if (clicks >= lvl_upgrade_value) {
+    if (clicks >= lvl_upgrade_value)
         lvl += 1;
     }
     textRefresh();
@@ -23,5 +23,5 @@ function textRefresh() {
 }
 
 function lvlRefresh() {
-        document.getElementById("levelDisplay").innerHTML="Level "+lvl;
+        document.getElementById("levelDisplay").innerHTML=lvl;
 }

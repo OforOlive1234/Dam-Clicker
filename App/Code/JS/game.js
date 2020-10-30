@@ -15,7 +15,6 @@ function oncl() {
     if (clicks >= lvl_upgrade_value) {
         lvl += 1;
     }
-
     textRefresh();
 }
 

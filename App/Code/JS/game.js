@@ -1,7 +1,8 @@
 // Variables
 
 var clicks = 0;
-var auto_clicks_increment = 1000/clicks;
+var auto_clicks = 0;
+var auto_clicks_increment = 1000;
 var click_rate = 1000;
 var increment = 1;
 var lvl = 1;
@@ -15,9 +16,12 @@ function oncl() {
     textRefresh();
 }
 
-function autocl() {
-    clicks += auto_clicks_increment;
 
+function autocl() {
+    setInterval(function () {
+            clicks++;
+            textRefresh();
+        }, 1000);
 }
 
 function textRefresh() {

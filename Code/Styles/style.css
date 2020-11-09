@@ -13,17 +13,39 @@ li {
   text-align: left;
 }
 
+footer {
+  background-color: #292626;
+  color: whitesmoke;
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+  display: inline-block;
+}
+
 button {
   background-color: whitesmoke;
   color: #181818;
   border: 1px solid #626262;
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 10px;
-  margin-top: 20px;
   font-weight: 700;
   width: auto;
   cursor: pointer;
   text-align: center;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #626262;
+  color: whitesmoke;
+}
+
+#m-top {
+  margin-top: 20px;
+}
+
+.btn-main {
+  width: 300px;
 }
 
 .box-title {

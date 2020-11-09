@@ -39,7 +39,11 @@ function autocl() {
 function checkincre() {
     if (increment == lvl) {
         increment++;
-
+        increrefresh();
+    } else if (increment != lvl) {
+        alert("You need to level up before you can buy more.");
+    } else {
+        alert("The game seems to be experiencing some bugs.")
     }
 }
 

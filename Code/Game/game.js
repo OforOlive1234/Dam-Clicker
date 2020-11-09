@@ -6,7 +6,8 @@ var auto_redeem = 0;
 var auto_clicks_increment = 1;
 var increment = 1;
 var lvl = 1;
-var lvl_upgrade_value = lvl*50;
+var lvl_upgrade_value = lvl * 50;
+var auto_upgrade_value = lvl - 1;
 
 
 // Functions
@@ -17,7 +18,7 @@ function oncl() {
 }
 
 function checkauto() {
-    if (auto_clicks == 0) {
+    if (auto_clicks == auto_upgrade_value) {
         auto_clicks++;
         autocl();
         autorefresh();
@@ -33,6 +34,13 @@ function autocl() {
             clicks++;
             textrefresh();
         }, 1000);
+}
+
+function checkincre() {
+    if (increment == lvl) {
+        increment++;
+
+    }
 }
 
 
@@ -56,4 +64,8 @@ function lvlrefresh() {
 
 function autorefresh() {
     document.getElementById("autoDisplay").innerHTML="Autoclickers: "+auto_clicks;
+}
+
+function increrefresh() {
+    document.getElementById("increDisplay").innerHTML="Click Increment: "+increment;
 }

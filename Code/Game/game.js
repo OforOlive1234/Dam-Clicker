@@ -22,10 +22,8 @@ function checkauto() {
         auto_clicks++;
         autocl();
         autorefresh();
-    } else if (auto_clicks > 0) {
-        alert("You need to level up before you can buy more.");
     } else {
-        alert("The game seems to be experiencing some bugs.")
+        alert("No more autoclick for you, naughty Osacr")
     }
 }
 
@@ -51,10 +49,10 @@ function checkincre() {
 function lvlup() {
     if (clicks >= lvl_upgrade_value) {
         lvl++;
-    } else if (clicks < lvl_upgrade_value) {
+        lvlrefresh();
+    } else {
         alert("You do not have enough points to level up!");
     }
-    lvlrefresh();
 }
 
 

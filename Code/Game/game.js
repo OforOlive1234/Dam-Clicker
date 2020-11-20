@@ -6,8 +6,7 @@ var auto_redeem = 0;
 var auto_clicks_increment = 1;
 var increment = 1;
 var lvl = 1;
-var lvl_upgrade_value = lvl * 50;
-var auto_upgrade_value = lvl - 1;
+var lvl_upgrade_value = 50;
 
 // Functions
 
@@ -17,12 +16,14 @@ function oncl() {
 }
 
 function checkauto() {
-  if (auto_clicks == auto_upgrade_value) {
+  if (auto_clicks < lvl) {
     auto_clicks++;
     autocl();
     autorefresh();
+   } else if (auto_clicks >= lvl) {
+      alert("You need to level up before you can buy more.");
   } else {
-    alert("No more autoclick for you, naughty Osacr");
+    alert("The game seems to be experiencing some bugs.");
   }
 }
 
@@ -34,10 +35,10 @@ function autocl() {
 }
 
 function checkincre() {
-  if (increment == lvl) {
+  if (increment <= lvl) {
     increment++;
     increrefresh();
-  } else if (increment != lvl) {
+  } else if (increment < lvl) {
     alert("You need to level up before you can buy more.");
   } else {
     alert("The game seems to be experiencing some bugs.");
@@ -48,9 +49,14 @@ function lvlup() {
   if (clicks >= lvl_upgrade_value) {
     lvl++;
     lvlrefresh();
+    lvlupgradeupdate()
   } else {
     alert("You do not have enough points to level up!");
   }
+}
+
+function lvlupgradeupdate() {
+  lvl_upgrade_value = lvl_upgrade_value * 2;
 }
 
 function textrefresh() {

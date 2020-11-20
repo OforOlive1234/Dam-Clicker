@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/style.css" />
     <title>Dam Clicker | Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="game-container">
-            <button onClick=oncl()>Build Dam</button>
-            <h2 id="scoreDisplay">O points</h2>
-            <hr>
-            <p id="autoDisplay">Autoclickers: 0</p>
-            <br>
-            <p id="increDisplay">Click Increment: 1</p>
-            <hr>
-            <h3>Upgrades</h3>
-            <p>
-                <button class="btn-main" onClick=checkauto()>Buy 1 Autoclicker</button>
-                <br>
-                <button class="btn-main" onClick=checkincre()>Upgrade Click Increment</button>
-            </p>
-            <h2 id="levelDisplay">Level 1</h2>
-            <button onClick=lvlup()>Level up!</button>
-            <hr>
-            <a href="../../index.html"><button>Back to Menu</button></a>
-        </div>
+      <div class="game-container">
+        <button onClick="oncl()">Build Dam</button>
+        <h2 id="scoreDisplay">O points</h2>
+        <hr>
+        <p id="autoDisplay">Autoclickers: 0</p>
+        <br />
+        <p id="increDisplay">Click Increment: 1</p>
+        <hr />
+        <h3>Upgrades</h3>
+        <p>
+          <button class="btn-main" onClick="checkauto()">
+            Buy 1 Autoclicker
+          </button>
+          <br />
+          <button class="btn-main" onClick="checkincre()">
+            Upgrade Click Increment
+          </button>
+        </p>
+        <h2 id="levelDisplay">Level 1</h2>
+        <button onClick="lvlup()">Level up!</button>
+        <hr />
+        <a href="../../index.html"><button>Back to Menu</button></a>
+      </div>
     </div>
-<script src="../Game/game.js"></script> 
-</body>
+    <script src="../Game/game.js"></script>
+  </body>
 </html>

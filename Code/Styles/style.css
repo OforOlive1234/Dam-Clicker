@@ -44,6 +44,14 @@ button:hover {
   margin-top: 20px;
 }
 
+.icon {
+  margin-left: 90%;
+  width: 50px;
+  padding: 10px;
+  border: 2px solid #626262;
+  border-radius: 3px;
+}
+
 .btn-main {
   width: 300px;
 }

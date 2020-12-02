@@ -9,4 +9,3 @@ I'm making progress now!
 - IDK
 
 # If you have ideas let please let me know
-

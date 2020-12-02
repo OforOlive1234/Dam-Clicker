@@ -20,8 +20,8 @@ function checkauto() {
     auto_clicks++;
     autocl();
     autorefresh();
-   } else if (auto_clicks >= lvl) {
-      alert("You need to level up before you can buy more.");
+  } else if (auto_clicks >= lvl) {
+    alert("You need to level up before you can buy more.");
   } else {
     alert("The game seems to be experiencing some bugs.");
   }
@@ -38,7 +38,7 @@ function checkincre() {
   if (increment <= lvl) {
     increment++;
     increrefresh();
-  } else if (increment < lvl) {
+  } else if (increment <= lvl) {
     alert("You need to level up before you can buy more.");
   } else {
     alert("The game seems to be experiencing some bugs.");
@@ -49,7 +49,7 @@ function lvlup() {
   if (clicks >= lvl_upgrade_value) {
     lvl++;
     lvlrefresh();
-    lvlupgradeupdate()
+    lvlupgradeupdate();
   } else {
     alert("You do not have enough points to level up!");
   }

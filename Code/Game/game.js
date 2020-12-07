@@ -8,6 +8,9 @@ var increment = 1;
 var lvl = 1;
 var lvl_upgrade_value = 50;
 
+var auto_cost = auto_clicks * 10;
+var incre_cost = increment * 15;
+
 // Functions
 
 function oncl() {
@@ -16,7 +19,7 @@ function oncl() {
 }
 
 function checkauto() {
-  if (auto_clicks < lvl) {
+  if (clicks >= auto_cost) {
     auto_clicks++;
     autocl();
     autorefresh();
@@ -35,11 +38,9 @@ function autocl() {
 }
 
 function checkincre() {
-  if (increment <= lvl) {
+  if (clicks >= incre_cost) {
     increment++;
     increrefresh();
-  } else if (increment <= lvl) {
-    alert("You need to level up before you can buy more.");
   } else {
     alert("The game seems to be experiencing some bugs.");
   }
